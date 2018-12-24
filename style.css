@@ -1,9 +1,12 @@
-
+body
+{
+	background-color:#e8d09d;
+}
 td
 {
-	border: 2px solid #333;
-	height: 100px;
-	width: 100px;
+	border: 3px solid #333;
+	height: 150px;
+	width: 150px;
 	text-align: center;
 	font-family: "Comic Sans MS", cursive;
 	font-size: 70px;
@@ -14,7 +17,7 @@ table
 	border-collapse: collapse;
 	position: absolute;
 	left: 50%;
-	margin-left: -155px;
+	margin-left: -270px;
 	top:50px;
 }
 table tr:first-child td 
@@ -36,7 +39,7 @@ table tr td:last-child
 
 .endgame
 {
-	
+	display:none;
 	width:200px;
 	top:120px;
 	background-color:rgba(205,133,63,0.8);
