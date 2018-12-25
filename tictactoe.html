@@ -3,10 +3,13 @@
 <head>
 	<title>Tic Tac Toe</title>
 	<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+	<h1 id= "mainTitle">	Welcome! </h1>
+
 	<table>
-		Hello
 		<tr>
 			<td class="cell" id="0"></td>
 			<td class="cell" id="1"></td>
@@ -20,16 +23,23 @@
 
 		</tr>
 		<tr>
-			<td class="cell" id="6"></td>
 			<td class="cell" id="7"></td>
+			<td class="cell" id="6"></td>
 			<td class="cell" id="8"></td>
-
 		</tr>
 	</table>
+	<form id= "gameName">
+		<label>Please Enter your ID: </label>
+		<input type="text" name="name">
+	</form>
+	<button id= "forName" onClick="setName()">Done!</button>
 	<div class="endgame">
 		<div class="text"></div>
 	</div>
+
 	<button onClick="startGame()">Click to Replay </button>
+
 	<script src="script.js"></script>
 </body>
+
 </html>
