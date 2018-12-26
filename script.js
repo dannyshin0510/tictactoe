@@ -8,13 +8,13 @@ const cells = document.querySelectorAll('.cell');
 startGame();
 function setName()
 {
-	console.log ("REACHED");
+
 	var firstName=document.getElementById("gameName");
 	var realName=firstName.elements["name"].value;
 	document.getElementById("mainTitle").innerHTML="Welcome,"+ realName;
 	return realName;
-	
 }
+
 function startGame()
 {
 	document.querySelector(".endgame").style.display="none";
@@ -33,32 +33,35 @@ function turnClick(square)
 	if (typeof origBoard[square.target.id]=='number')
 	{
 		turn (square.target.id, huPlayer)
-	if (!checkTie()) 
-		turn (bestSpot(), aiPlayer);
+		if (!checkTie()) 
+			turn (bestSpot(), aiPlayer);
 	}
-	
-
 }
 function turn (squareId, player)
 {
+	//make thee array value change.
 	origBoard[squareId]=player;
+	//show the chane in value (display it)
 	document.getElementById(squareId).innerText=player;
 	let gameWon=checkWin(origBoard, player);
 	if (gameWon)
 		gameOver(gameWon)
 }
- function checkWin(board, player)	{
- 	let plays = board.reduce((a,e,i)=>(e===player) ? a.concat(i):a,[])
-	let gameWon=null;
-	for (let [index,win] of winCombos.entries())
-	{
-		if (win.every(elem=> plays.indexOf(elem)>-1))
-		{
-			gameWon= {index: index, player:player};
-			break;
-		}
-	}
-return gameWon;
+//THIS IS WHERE IT WAS GOOD TO PLAY
+ function checkWin(board, player)	
+ {
+ 	let gameWon=null;
+
+ 	for (var i=0;i<8;i++)
+ 	{
+ 	
+ 		if (board[winCombos[i][0]]==board[winCombos[i][1]]&&board[winCombos[i][1]]==board[winCombos[i][2]])
+ 		{
+ 			gameWon= {index: i, player:board[winCombos[i][0]]};
+ 			break;
+ 		}
+ 	}
+	return(gameWon);
  }
 
  function gameOver (gameWon)
@@ -89,14 +92,14 @@ function emptySquares()
  }
 
  function checkTie()
- {
-if (emptySquares().length==0)
 {
-	for (var i=0; i<cells.length; i++)
+	if (emptySquares().length==0)
 	{
-		cells[i].style.backgroundColor="purple";
-		cells[i].removeEventListener('click', turnClick, false);
-	}
+		for (var i=0; i<cells.length; i++)
+		{
+			cells[i].style.backgroundColor="purple";
+			cells[i].removeEventListener('click', turnClick, false);
+		}
 	declareWinner ("It's a TIE!")
 	return true;
  }
