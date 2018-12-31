@@ -8,7 +8,6 @@ const cells = document.querySelectorAll('.cell');
 startGame();
 function setName()
 {
-
 	var firstName=document.getElementById("gameName");
 	var realName=firstName.elements["name"].value;
 	document.getElementById("mainTitle").innerHTML="Welcome,"+ realName;
