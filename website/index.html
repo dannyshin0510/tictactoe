@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+<meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+  <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+  <script language="javascript" type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+	<h1 id= "mainTitle">	Welcome! </h1>
+
+	<table>
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+
+		</tr>
+		<tr>
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+
+		</tr>
+		<tr>
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+		</tr>
+	</table>
+	<form id= "gameName">
+		<label>Please enter your ID: </label>
+		<input id="word" type="text" name="name">
+		<br>
+		<label>Please enter your winning streak: </label>
+    	<input id="score" type="score" name="name">
+	</form>
+
+  	<button id="submit" name="button">Submit</button>
+	<div class="endgame">
+	<div class="text"></div>
+	</div>
+	<button id="replayButton" onClick="startGame()">Click to Replay </button>
+</body>
+
+</html>

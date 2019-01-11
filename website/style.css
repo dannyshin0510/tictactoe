@@ -1,0 +1,91 @@
+body
+{
+	background-color:#e8d09d;
+}
+h1
+{
+	font-family: "Comic Sans MS", cursive;
+	font-size: 40px;
+	text-align: center;
+}
+td
+{
+	border: 3px solid #333;
+	height: 150px;
+	width: 150px;
+	text-align: center;
+	font-family: "Comic Sans MS", cursive;
+	font-size: 70px;
+	cursor: pointer;
+}
+table
+{
+	border-collapse: collapse;
+	position: absolute;
+	left: 50%;
+	margin-left: -220px;
+	top:120px;
+}
+table tr:first-child td 
+{
+	border-top:0;
+}
+table tr:last-child td 
+{
+	border-bottom:0;
+}
+table tr td:first-child
+{
+	border-left:0;
+}
+table tr td:last-child
+{
+	border-right:0;
+}
+.login
+{
+	position: absolute;
+	top:80%;
+	left: 5%;
+}
+#submit
+{
+	width:7vw;
+	height:5vh;
+	margin-top:10vh;
+	margin-left:10vw;
+	font-size:15px;
+}
+#replayButton
+{
+	width:10vw;
+	height:10vh;
+	margin-top:60vh;
+	margin-left:60vw;
+	font-size:15px;
+	margin-bottom:50px;
+}
+#word
+{
+	margin-left:6vw;
+}
+#score
+{
+
+}
+.endgame
+{
+	display:none;
+	width:200px;
+	top:120px;
+	background-color:rgba(205,133,63,0.8);
+	position: absolute;
+	left: 50%;
+	margin-left:-100px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	border-radius:5px;
+	color: white;
+	font-size: 2em;
+}
