@@ -6,22 +6,18 @@ const winCombos=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]
 const firstName= document.getElementById(name);
 const cells = document.querySelectorAll('.cell');
 
-startGame();
-function setName()
-{
-  var firstName=document.getElementById("gameName");
-  var realName=firstName.elements["name"].value;
-  document.getElementById("mainTitle").innerHTML="Welcome,"+ realName;
-  return realName;
-}
 
+
+startGame();
+
+  
 function startGame()
 {
   document.querySelector(".endgame").style.display="none";
   origBoard=Array.from(Array(9).keys());
-
   for (var i=0;i<cells.length; i++)
   {
+
     cells[i].innerText='';
     cells[i].style.removeProperty('background-color');
     cells[i].addEventListener ('click', turnClick, false);
@@ -106,19 +102,25 @@ function emptySquares()
  return false;
 }
 });
+
 function setup() {
-  // drawData();
-  // var button = select('#submit');
-  // button.mousePressed(submitWord);
   $("#submit").click(function(){
     submitWord();
+  });
+  $("#login").click(function(){
+    setName();
   });
 }
 
 // function drawData() {
 //   loadJSON('all', gotData);
 // }
-
+function setName()
+{
+  var realName=select("#word").value();
+  document.getElementById("mainTitle").innerHTML="Welcome,"+ realName;
+  return realName;
+}
 function submitWord() {
   var word = select('#word').value();
   var score = select('#score').value();
@@ -141,5 +143,3 @@ function submitWord() {
 //     text(word, x, y);
 //   }
 // }
-
-
