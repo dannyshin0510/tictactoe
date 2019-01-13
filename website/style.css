@@ -50,10 +50,19 @@ table tr td:last-child
 }
 #submit
 {
+	float:left;
 	width:7vw;
 	height:5vh;
-	margin-top:10vh;
-	margin-left:10vw;
+	margin-top:5vh;
+	margin-left:3vw;
+	font-size:15px;
+}
+#login
+{
+	float:left;
+	margin-top:5vh;
+	height:5vh;
+	width:7vw;
 	font-size:15px;
 }
 #replayButton
@@ -67,7 +76,7 @@ table tr td:last-child
 }
 #word
 {
-	margin-left:6vw;
+	margin-left:5.4vw;
 }
 #score
 {
